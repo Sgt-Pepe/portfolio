@@ -1,0 +1,214 @@
+<!-- BOILERPLATE TEMPLATE - START EVERY HTML WITH THIS:
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title></title> 
+
+        <link rel="stylesheet" href="css/styles.css"> 
+    </head>
+
+    <body>
+        
+    </body>
+</html> 
+-->
+
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title></title> 
+
+        <link rel="stylesheet" href="css/styles.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+NKo&family=Sacramento&family=Solitreo&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+        <center>
+            
+            <!--TITLE PANEL-->
+            <div class="title-panel"> <!--div is a content division modifier-->
+                <div class="title-text">
+                    <h3 style="position:relative; top:10px;">Hello! I'm</h3>
+                    <h1>Matthew Krassowski</h1>
+                    <p style="position:relative; bottom:10px; font-size: 130%;">
+                        Game Developer and Software Engineer
+                    </p>
+                </div>
+                <hr class="hrDotted" style="top:525px;">
+            </div>
+
+            <!--ABOUT PANEL-->
+            <div class="about-panel" style="float:top;">
+                <div class="about-text">
+                    <h1>About Me</h1>
+                    <p style="position:relative; width: 650px; bottom:2px; font-size: 140%; text-align:justify; letter-spacing: .10em; line-height:140%;">
+                        I'm passionate about software development, especially surrounding application and game design. 
+                        <br><br>
+                        I used to work as a paralegal, so I endeavor to be fastidious, neat, and organized.
+                        <br><br>
+                        I love Dungeons & Dragons. I play regularly with friends and watch various D&D podcasts. It's the best.
+                    </p>
+                </div>
+
+                <hr class="hrDotted" style="top:125px;">
+            </div>
+
+            <!--PORTFOLIO PANEL-->
+            <div class="portfolio-panel">
+                <div class="about-text">
+                    <h1>Portfolio</h1>
+                    <div style="height:25px;"></div>
+
+                    <!--PROJECT 1 -WILD GROWTH TD-->
+                    <h2 class="portfolio-title">Wild Growth TD</h2>
+                    <br>
+                    
+                    <div class="about-text" style="height:auto;">
+
+                        <!--Main GIF-->
+                        <div class="mainImage">
+
+                            <!-- VIDEOS ARE TOO LARGE TO UPLOAD TO GITHUB - USE YOUTUBE LINK INSTEAD
+                                <video id="videoID" class="size100" src="Videos/WildGrowth_Trailer.mp4" type="video/mp4" muted></video>
+                                <script>
+                                    let myVideo = document.getElementById("videoID");
+                                    
+                                    if(typeof myVideo.loop == 'boolean'){ //loop supported
+                                        myVideo.loop = true;
+                                    }
+                                    else { //loop property not supported
+                                        myVideo.addEventListener('ended', function(){
+                                            this.currentTime = 0;
+                                            this.play();
+                                        }, false)
+                                    }
+
+                                    myVideo.play();
+                                </script>
+                            -->
+                            
+                            <div class="size100" id="muteYouTubeVideoPlayer"></div>
+                            <script async src="https://www.youtube.com/iframe_api"></script>
+                            <script>
+                                function onYouTubeIframeAPIReady() {
+                                    var player;
+                                    player = new YT.Player('muteYouTubeVideoPlayer', {
+                                        videoId: 'rRt9TbpfYYI', // YouTube Video ID
+                                        width: 560,               // Player width (in px)
+                                        height: 316,              // Player height (in px)
+                                        playerVars: {
+                                            mute: 1,
+                                            autoplay: 1,        // Auto-play the video on load
+                                            controls: 1,        // Show pause/play buttons in player
+                                            showinfo: 0,        // Hide the video title
+                                            modestbranding: 1,  // Hide the Youtube Logo
+                                            loop: 1,            // Run the video in a loop
+                                            fs: 1,              // Hide the full screen button
+                                            cc_load_policy: 0, // Hide closed captions
+                                            iv_load_policy: 3,  // Hide the Video Annotations
+                                            autohide: 0,         // Hide video controls when playing
+                                            playlist: "rRt9TbpfYYI"
+                                        },
+                                        events: {
+                                            onReady: function(e) {
+                                                e.target.mute();
+                                            }
+
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                        
+                        <!--Main Description-->
+                        <p class="portfolio-description">
+                            A tower defense game with real time strategy and rogue-lite elements, in which you manage resources, grow out your grove, and defend against invasive enemies. <br><br>
+                            Solo-developed and currently in Alpha Play Test on Steam. <br>
+
+                            <!--LINK TO STEAM PAGE // target="_blank" will open new window-->
+                            <a href="https://store.steampowered.com/app/2237280/Wild_Growth_TD/" target="_blank">Steam Link</a> 
+                        </p>
+                        <br>
+                        <div style="height:1px;"></div>
+
+                    </div>
+
+                    <!--PROJECT 1 HIGHLIGHTS-->
+                    <div class="about-text" style="height:auto; clear:both; padding-top:10px;">
+                        
+                        <h2 class="breakdownTitle">Breakdown Title</h2>
+                        
+                        <div class="breakdownImage">
+                            <img id="breakdownGif" class="size100" src="Images/wg_main.gif" alt="">
+                        </div>
+                        
+                        <p class="portfolio-breakdown">
+                            A tower defense game with real time strategy and rogue-lite elements, in which you manage resources, grow out your grove, and defend against invasive enemies. <br><br>
+                            Solo-developed and currently in Alpha Play Test on Steam. <br>
+                        </p>
+                        
+                        <div id="pBtns1" class="projectBtns" style="height:100; clear:both;">
+                            <button id="p1Btn1" class="circleButton">
+                                <img id="p1Img1" class="size100" src="images/circleSelected.png" alt="" >
+                            </button>
+                            <button id="p1Btn2" class="circleButton">
+                                <img id="p1Img2" src="images/circle.png" alt="">
+                            </button>
+                            <button id="p1Btn3" class="circleButton">
+                                <img id="p1Img3" src="images/circle.png" alt="">
+                            </button>
+                            <button id="p1Btn4" class="circleButton">
+                                <img id="p1Img4" src="images/circle.png" alt="">
+                            </button>
+                        </div>
+
+                        <div style="position:relative; clear:both; float:left; bottom:200px;" >
+                            <button id="p1Left" class="arrowBtn">
+                                <img src="images/leftArrow.png" alt="">
+                            </button>
+                        </div>
+    
+                        <div style="position:relative; float: right; bottom:200px;" >
+                            <button id="p1Right" class ="arrowBtn">
+                                <img src="images/rightArrow.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    
+
+                    
+                    
+                    <hr>
+                    <div style="height:50px;"></div>
+
+
+                    <div class="about-text" style="height:300px;">
+                        <!--PROJECT 2 - FISHER FROG-->
+                        <h2 class="portfolio-title">Project 2</h2>
+                        <div style="height:30px;"></div>
+                    </div>
+
+
+                    <div class="about-text" style="height:300px;">
+                        <!--Breakdown 3-->
+                        <h2 class="portfolio-title">Breakdown 1</h2>
+                        <div style="height:30px;"></div>
+
+                    </div>
+                </div>  
+            </div>
+
+            <!--FOOTER PANEL-->
+            <div class="footer-panel">
+
+            </div>
+        </center>
+    </body>
+
+    <script src="mainScript.js"></script> <!--inject the code here after setting up the entire html structure-->
+</html> 
