@@ -6,6 +6,7 @@
         margin:0; 
         padding:0;
         overflow-x:hidden;
+        box-sizing: border-box;
     }
     
     body {
@@ -103,8 +104,7 @@
     }
 
     .title-text {
-        padding: 200px 10%;
-        
+        padding: 200px 5px;
     }
 
     .cloudStyle1 {
@@ -164,6 +164,7 @@
         text-align:justify; 
         letter-spacing: .10em; 
         line-height:140%;
+        box-sizing: border-box; /*WIDTH + PADDING CALCULATED FOR TOTAL WIDTH SIZE*/
     }
 
 /*#endregion*/
