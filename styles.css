@@ -16,13 +16,13 @@
         font-family: 'Sacramento', cursive;
         font-family: 'Solitreo', cursive;
         */
-
     }
 
     h1 {
         color:#30E3CA;
         font-family: 'Solitreo', cursive;
         font-size: 310%; /*USE PERCENTAGES INSTEAD OF PX - so that it will scale up when universally changing font size*/
+        line-height:100%;
         margin:0;
     }
 
@@ -98,14 +98,13 @@
 
     .title-panel{
         background-image: linear-gradient(#0F4C75, #1B262C);
-        position:relative;
-        height:500px;
-        width:100%;
+        height:auto;
+        
     }
 
     .title-text {
-        position:relative;
-        top:175px;
+        padding: 200px 10%;
+        
     }
 
     .cloudStyle1 {
@@ -136,10 +135,7 @@
         border-top:8px dotted #c1ebea;
         height: 3px;
         width: 4%;
-        position: relative;
-        bottom:0;
         margin:0;
-        top: 300px;
     }
 
     hr {
@@ -157,25 +153,29 @@
         padding-top: 300px;
         padding-bottom:200px;
         height:auto;
+        margin:0;
     }
 
     .about-text {
-        position:relative;
-        margin:0;
+        width: 40%; 
+        padding:10px 10px; 
+        padding-bottom: 200px; 
+        font-size: 140%; 
+        text-align:justify; 
+        letter-spacing: .10em; 
+        line-height:140%;
     }
 
 /*#endregion*/
 
 /*#region***********PORTFOLIO PANEL************/
     .portfolio-panel {
-        position:relative;
         background-image: linear-gradient(#0F4C75, #1B262C);
         padding-top:50px;
-        height:2300px;
+        height:auto;
     }
 
     .portfolio-title {
-        position:relative; 
         float:right; 
         top:2px; 
         font-size: 140%; 
