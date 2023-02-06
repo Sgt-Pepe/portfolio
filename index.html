@@ -28,7 +28,7 @@
               }
         </style>
         
-        <title></title> 
+        <title>Matthew Krassowski</title> 
 
         <link rel="stylesheet" href="styles.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,50 +70,31 @@
 
                 <hr class="hrDotted">
             </div>
+        </center>
 
             <!--PORTFOLIO PANEL-->
             <div class="portfolio-panel">
-                <div class="about-text">
-                    <h1>Portfolio</h1>
-                    <div style="height:25px;"></div>
+    
+                <h1 style="text-align:center;">Portfolio</h1>
+                <div style="height:25px;"></div>
 
-                    <!--PROJECT 1 -WILD GROWTH TD-->
+                <!--PROJECT 1 -WILD GROWTH TD-->
+                <div class="projectContainer">
+                    
                     <h2 class="portfolio-title">Wild Growth TD</h2>
                     <br>
                     
-                    <div class="about-text" style="height:auto;">
-
-                        <!--Main GIF-->
-                        <div class="mainImage">
-
-                            <!-- VIDEOS ARE TOO LARGE TO UPLOAD TO GITHUB - USE YOUTUBE LINK INSTEAD
-                                <video id="videoID" class="size100" src="Videos/WildGrowth_Trailer.mp4" type="video/mp4" muted></video>
-                                <script>
-                                    let myVideo = document.getElementById("videoID");
-                                    
-                                    if(typeof myVideo.loop == 'boolean'){ //loop supported
-                                        myVideo.loop = true;
-                                    }
-                                    else { //loop property not supported
-                                        myVideo.addEventListener('ended', function(){
-                                            this.currentTime = 0;
-                                            this.play();
-                                        }, false)
-                                    }
-
-                                    myVideo.play();
-                                </script>
-                            -->
-                            
-                            <div class="size100" id="muteYouTubeVideoPlayer"></div>
+                    <div class="projectVidContainer">
+                            <div class="vidContainer">
+                            <div class="mainImage" id="muteYouTubeVideoPlayer"></div>
                             <script async src="https://www.youtube.com/iframe_api"></script>
                             <script>
                                 function onYouTubeIframeAPIReady() {
                                     var player;
                                     player = new YT.Player('muteYouTubeVideoPlayer', {
                                         videoId: 'rRt9TbpfYYI', // YouTube Video ID
-                                        width: 560,               // Player width (in px)
-                                        height: 316,              // Player height (in px)
+                                        width: 640,               // Player width (in px)
+                                        height: 352,              // Player height (in px)
                                         playerVars: {
                                             mute: 1,
                                             autoplay: 1,        // Auto-play the video on load
@@ -125,24 +106,26 @@
                                             cc_load_policy: 0, // Hide closed captions
                                             iv_load_policy: 3,  // Hide the Video Annotations
                                             autohide: 0,         // Hide video controls when playing
+                                            
                                             playlist: "rRt9TbpfYYI"
                                         },
                                         events: {
                                             onReady: function(e) {
                                                 e.target.mute();
                                             }
-
+    
                                         }
                                     });
                                 }
                             </script>
-                        </div>
+                            </div>
+                    </div>
                         
                         <!--Main Description-->
                         <p class="portfolio-description">
                             A tower defense game with real time strategy and rogue-lite elements, in which you manage resources, grow out your grove, and defend against invasive enemies. <br><br>
                             Solo-developed and currently in Alpha Play Test on Steam. <br>
-
+    
                             <!--LINK TO STEAM PAGE // target="_blank" will open new window-->
                             <a href="https://store.steampowered.com/app/2237280/Wild_Growth_TD/" target="_blank">Steam Link</a> 
                         </p>
@@ -150,7 +133,7 @@
                         <div style="height:1px;"></div>
 
                     </div>
-
+    
                     <!--PROJECT 1 HIGHLIGHTS-->
                     <div class="about-text" style="height:auto; clear:both; padding-top:10px;">
                         
@@ -179,7 +162,7 @@
                                 <img id="p1Img4" src="images/circle.png" alt="">
                             </button>
                         </div>
-
+    
                         <div style="position:relative; clear:both; float:left; bottom:200px;" >
                             <button id="p1Left" class="arrowBtn">
                                 <img src="images/leftArrow.png" alt="">
@@ -192,13 +175,12 @@
                             </button>
                         </div>
                     </div>
-                    
 
                     
+
                     
                     <hr>
                     <div style="height:50px;"></div>
-
 
                     <div class="about-text" style="height:300px;">
                         <!--PROJECT 2 - FISHER FROG-->
@@ -206,21 +188,19 @@
                         <div style="height:30px;"></div>
                     </div>
 
-
+                 
                     <div class="about-text" style="height:300px;">
                         <!--Breakdown 3-->
                         <h2 class="portfolio-title">Breakdown 1</h2>
                         <div style="height:30px;"></div>
 
                     </div>
-                </div>  
-            </div>
 
             <!--FOOTER PANEL-->
             <div class="footer-panel">
 
+            </div> 
             </div>
-        </center>
     </body>
 
     <script src="mainScript.js"></script> <!--inject the code here after setting up the entire html structure-->

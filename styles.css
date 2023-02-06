@@ -25,11 +25,13 @@
         font-size: 310%; /*USE PERCENTAGES INSTEAD OF PX - so that it will scale up when universally changing font size*/
         line-height:100%;
         margin:0;
+        box-sizing: border-box; 
     }
 
     h2 {
         margin:0;
         color:#F0F5F9;
+        box-sizing: border-box; 
     }
 
     h3 {
@@ -38,11 +40,13 @@
         letter-spacing: .11em;
         font-size:145%;
         margin:0;
+        box-sizing: border-box; 
     }
 
     p {
         color:#F0F5F9;
         margin:0;
+        box-sizing: border-box; 
     }
 
     a:visited {
@@ -124,7 +128,6 @@
     }
 
     .size100{
-        position:relative;
         height:100%;
         width:100%;
     }
@@ -175,37 +178,60 @@
         padding-top:50px;
         height:auto;
     }
+    
+    .projectContainer {
+        height: auto;
+        text-align:center;
+        padding: 0 10%;
+        box-sizing: border-box; /*WIDTH + PADDING CALCULATED FOR TOTAL WIDTH SIZE*/
+        overflow:hidden;
+    }
 
     .portfolio-title {
-        float:right; 
-        top:2px; 
+        float:right;  
         font-size: 140%; 
         text-align:center;
-        right:320px;
-        padding: 10px 200px;
+        padding: 5px 20px;
+        width:50%;
+        box-sizing: border-box; /*WIDTH + PADDING CALCULATED FOR TOTAL WIDTH SIZE*/
+        height:auto;
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    .projectVidContainer{
+        width: 50%;
+        float:left;
+        margin: 0 auto;
+    }
+
+    .vidContainer{
+        position:relative;
+        width: 100%;
+        padding-top: 56.25%;
+        overflow:hidden;
+        height:0;
+    }
+ 
+    .mainImage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .portfolio-description {
-        position:relative; 
         float:right; 
-        width: 500px; 
+        width:50%;
         bottom:2px; 
         font-size: 120%; 
         text-align:justify;
-        padding: 10px 20px;
-        right: 180px;
+        padding: 5px 20px;
         height:auto;
-    }
-
-    .mainImage {
-        position:relative;
-        float:left;
-        left: 170px;
-        width: 500px;
-        max-width: 500px;
-        height:280px;
-        bottom: 25px;
-        padding: 10px 20px;
+        padding-top: 20px;
     }
 
     .breakdownTitle {

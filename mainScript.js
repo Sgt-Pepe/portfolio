@@ -27,8 +27,10 @@ const project1BtnImg4 = document.querySelector("#p1Img4");
 //#endregion
 
 //#region PROJECT REFERENCES:
+const aboutText = document.getElementsByClassName('about-text');
+
 const projectTitle = document.getElementsByClassName('portfolio-title'); //CREATES AN ARRAY
-const projectImages = document.getElementsByClassName('mainImage'); //CREATES AN ARRAY
+const projectImages = document.getElementsByClassName('projectVidContainer'); //CREATES AN ARRAY
 const projectText = document.getElementsByClassName('portfolio-description'); //CREATES AN ARRAY
 const projectButtons = document.getElementsByClassName('projectBtns'); //CREATES AN ARRAY
 
@@ -169,50 +171,65 @@ const breakdownGIF = document.querySelector("#breakdownGif");
     window.addEventListener('resize', function(event){ //Adding an event listener (NEVER OVERRIDE THE WINDOW ONRESIZE FUNCTION)
         w = window.innerWidth;
         if(w < maxWidth){
+            ScaleDownAboutText();
             ScaleDownProjectPanel();
             ScaleDownBreakdownPanel();
         }
         else {
+            ScaleUpAboutText();
             ScaleUpProjectPanel();
             ScaleUpBreakdownPanel();
         }
     }, true)
 
+    function ScaleUpAboutText(){
+        for(i = 0; i < aboutText.length; i++){
+            aboutText[i].style.width = "40%";
+        }
+    }
+
+    function ScaleDownAboutText(){
+        for(i = 0; i < aboutText.length; i++){
+            aboutText[i].style.width = "90%";
+        }
+    }
+
     function ScaleDownProjectPanel(){
+
         for(i = 0; i < projectImages.length; i++){
-            projectImages[i].style.float = "none"; 
-            projectImages[i].style.width = "50%";
-            projectImages[i].style.left = "0";
+            projectImages[i].style.width = "90%";
+            projectImages[i].style.float = "none";
         }
 
         for(i = 0; i < projectText.length; i++){  
-            projectText[i].style.width = "50%";
-            projectText[i].style.right = "0";
-            projectText[i].style.float = "none"; 
+            projectText[i].style.width = "90%";
+            projectText[i].style.paddingTop = "10px"; 
         }
 
         for(i = 0; i < projectTitle.length; i++){
-            projectTitle[i].style.float = "none"; 
-            projectTitle[i].style.right= "0";
+            projectTitle[i].style.width = "90%";
+            projectTitle[i].style.textAlign = "center";
+            projectTitle[i].style.paddingTop = "0px";
         }
     }
 
     function ScaleUpProjectPanel(){
         for(i = 0; i < breakdownImages.length; i++){
+            projectImages[i].style.width = "50%";
             projectImages[i].style.float = "left";
-            projectImages[i].style.left = "170px";
-            projectImages[i].style.width = "550px";
         }
 
         for(i = 0; i < breakdownText.length; i++){
-            projectText[i].style.width = "500px";
-            projectText[i].style.right = "180px";
+            projectText[i].style.width = "50%";
             projectText[i].style.float = "right"; 
+            projectText[i].style.paddingTop = "20px"; 
         }
 
         for(i = 0; i < projectTitle.length; i++){
+            projectTitle[i].style.width = "50%";
             projectTitle[i].style.float = "right"; 
-            projectTitle[i].style.right= "320px";
+            projectTitle[i].style.textAlign = "left";
+            projectTitle[i].style.paddingTop = "20px";
         }
     }
 
