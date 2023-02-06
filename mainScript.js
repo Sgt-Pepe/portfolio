@@ -167,10 +167,18 @@ const breakdownGIF = document.querySelector("#breakdownGif");
 
 //#region WINDOW RESIZING METHODS
 
+    CheckWindowSize();
+
     //EVENT CALLED WHENEVER SCREEN IS RESIZED:
     window.addEventListener('resize', function(event){ //Adding an event listener (NEVER OVERRIDE THE WINDOW ONRESIZE FUNCTION)
         w = window.innerWidth;
-        if(w < maxWidth){
+        console.log(maxWidth);
+        console.log(w);
+        CheckWindowSize();
+    }, true)
+
+    function CheckWindowSize(){
+        if(w < maxWidth || maxWidth <= 900){
             ScaleDownAboutText();
             ScaleDownProjectPanel();
             ScaleDownBreakdownPanel();
@@ -180,7 +188,7 @@ const breakdownGIF = document.querySelector("#breakdownGif");
             ScaleUpProjectPanel();
             ScaleUpBreakdownPanel();
         }
-    }, true)
+    }
 
     function ScaleUpAboutText(){
         for(i = 0; i < aboutText.length; i++){
