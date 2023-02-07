@@ -167,12 +167,16 @@ const breakdownGIF = document.querySelector("#breakdownGif");
 
 //#region WINDOW RESIZING METHODS
 
-    if(aboutText[0].style.width <= "40%") {
-        CheckWindowSize();
-        console.log("TRUE");
-    } 
+    if(window.matchMedia("(max-width: 767px)").matches) {
+        //viewport is less than 768 pixels wide
+        console.log("MOBILE DEVICE");
+            ScaleDownAboutText();
+            ScaleDownProjectPanel();
+            ScaleDownBreakdownPanel();
+    }
     else {
-        console.log("FALSE");
+        console.log("NON MOBILE DEVICE");
+        CheckWindowSize();
     }
 
     //EVENT CALLED WHENEVER SCREEN IS RESIZED:
