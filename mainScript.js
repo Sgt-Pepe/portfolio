@@ -167,7 +167,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
 
 //#region WINDOW RESIZING METHODS
 
-    CheckWindowSize();
+    if(aboutText[0].style.width <= "40%") {
+        CheckWindowSize();
+        console.log("TRUE");
+    } 
+    else {
+        console.log("FALSE");
+    }
 
     //EVENT CALLED WHENEVER SCREEN IS RESIZED:
     window.addEventListener('resize', function(event){ //Adding an event listener (NEVER OVERRIDE THE WINDOW ONRESIZE FUNCTION)
@@ -178,7 +184,7 @@ const breakdownGIF = document.querySelector("#breakdownGif");
     }, true)
 
     function CheckWindowSize(){
-        if(w < maxWidth || maxWidth <= 900){
+        if(w < maxWidth){
             ScaleDownAboutText();
             ScaleDownProjectPanel();
             ScaleDownBreakdownPanel();
