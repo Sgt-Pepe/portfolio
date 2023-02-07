@@ -161,7 +161,6 @@
 
     .about-text {
         width: 40%; 
-        
         padding-bottom: 200px; 
         font-size: 140%; 
         text-align:justify; 
@@ -191,7 +190,7 @@
         float:right;  
         font-size: 140%; 
         text-align:center;
-        padding: 5px 20px;
+        padding: 2px 2px;
         width:50%;
         box-sizing: border-box; /*WIDTH + PADDING CALCULATED FOR TOTAL WIDTH SIZE*/
         height:auto;
@@ -229,7 +228,7 @@
         bottom:2px; 
         font-size: 120%; 
         text-align:justify;
-        padding: 5px 20px;
+        padding: 2px 2px;
         height:auto;
         padding-top: 20px;
     }
