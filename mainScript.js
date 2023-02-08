@@ -34,6 +34,11 @@ const projectImages = document.getElementsByClassName('projectVidContainer'); //
 const projectText = document.getElementsByClassName('portfolio-description'); //CREATES AN ARRAY
 const projectButtons = document.getElementsByClassName('projectBtns'); //CREATES AN ARRAY
 
+const breakdownPanel = document.getElementsByClassName('breakdown-panel'); //CREATES AN ARRAY
+const leftArrow = document.getElementsByClassName('leftArrowDiv'); //CREATES AN ARRAY
+const rightArrow = document.getElementsByClassName('rightArrowDiv'); //CREATES AN ARRAY
+const breakdownTextPanel = document.getElementsByClassName('breakdownText'); //CREATES AN ARRAY
+
 const breakdownTitle = document.getElementsByClassName('breakdownTitle'); //CREATES AN ARRAY
 const breakdownImages = document.getElementsByClassName('breakdownImage'); //CREATES AN ARRAY
 const breakdownText = document.getElementsByClassName('portfolio-breakdown'); //CREATES AN ARRAY
@@ -213,14 +218,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
     }
 
     function ScaleDownProjectPanel(){
-
         for(i = 0; i < projectImages.length; i++){
             projectImages[i].style.width = "90%";
             projectImages[i].style.float = "none";
         }
 
         for(i = 0; i < projectText.length; i++){  
-            projectText[i].style.width = "90%";
+            projectText[i].style.width = "100%";
             projectText[i].style.paddingTop = "10px"; 
         }
 
@@ -231,7 +235,7 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         }
     }
 
-    function ScaleUpProjectPanel(){
+    function ScaleUpProjectPanel(){   
         for(i = 0; i < breakdownImages.length; i++){
             projectImages[i].style.width = "50%";
             projectImages[i].style.float = "left";
@@ -252,53 +256,54 @@ const breakdownGIF = document.querySelector("#breakdownGif");
     }
 
     function ScaleDownBreakdownPanel(){
+
+        for(i = 0; i < breakdownPanel.length; i++){
+            breakdownPanel[i].style.width = "100%";
+        }
+
+        for(i = 0; i < breakdownTextPanel.length; i++){
+            breakdownTextPanel[i].style.width = "80%";
+            breakdownTextPanel[i].style.margin = "0 auto";
+            breakdownTextPanel[i].style.float ="none";
+            
+        }
+
         for(i = 0; i < breakdownImages.length; i++){
-            breakdownImages[i].style.float = "none"; 
-            breakdownImages[i].style.width = "50%";
-            breakdownImages[i].style.right = "0";
+            breakdownImages[i].style.width = "70%";
+            breakdownImages[i].style.margin = "0 auto";
+            breakdownImages[i].style.float = "none";
+        }
+        
+        for(i = 0; i < rightArrow.length; i++){
+            rightArrow[i].style.float = "right";
+            breakdownPanel[i].insertBefore(rightArrow[i], breakdownImages[i]);
         }
 
-        for(i = 0; i < breakdownText.length; i++){  
-            breakdownText[i].style.width = "50%";
-            breakdownText[i].style.left = "0";
-            breakdownText[i].style.float = "none"; 
-            breakdownText[i].style.bottom = "0";
-        }
-
-        for(i = 0; i < breakdownTitle.length; i++){  
-            breakdownTitle[i].style.float = "none"; 
-            breakdownTitle[i].style.left= "0";
-            breakdownTitle[i].style.top = "0px";
-        }
-
-        for(i = 0; i < projectButtons.length; i++){  
-            projectButtons[i].style.bottom = "0px";
-        }
     }
 
     function ScaleUpBreakdownPanel(){
+
         for(i = 0; i < breakdownImages.length; i++){
-            breakdownImages[i].style.float = "right";
-            breakdownImages[i].style.right = "250px";
-            breakdownImages[i].style.maxWidth = "500px";
+            breakdownPanel[i].style.width = "60%";
         }
 
-        for(i = 0; i < breakdownText.length; i++){
-            breakdownText[i].style.width = "350px";
-            breakdownText[i].style.left = "290px";
-            breakdownText[i].style.float = "left";
-            breakdownText[i].style.bottom= "200px";
+        for(i = 0; i < breakdownTextPanel.length; i++){
+            breakdownTextPanel[i].style.width = "40%";
+            breakdownTextPanel[i].style.margin = "0";
+            breakdownTextPanel[i].style.float ="left";
         }
 
-        for(i = 0; i < breakdownTitle.length; i++){  
-            breakdownTitle[i].style.float = "left"; 
-            breakdownTitle[i].style.left= "288px";
-            breakdownTitle[i].style.top = "50px";
+        for(i = 0; i < breakdownImages.length; i++){
+            breakdownImages[i].style.width = "40%";
+            breakdownImages[i].style.margin = "0";
+            breakdownImages[i].style.float = "left";
         }
 
-        for(i = 0; i < projectButtons.length; i++){  
-            projectButtons[i].style.bottom = "100px";
+        for(i = 0; i < rightArrow.length; i++){
+            rightArrow[i].style.float = "left";
+            breakdownPanel[i].insertBefore(rightArrow[i], null); //PARENT NODE.insertBefore(MoveThisElement, MoveItBeforeThis (null == end of parent node))
         }
+        
     }
 
 //#endregion
