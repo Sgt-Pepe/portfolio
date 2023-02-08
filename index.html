@@ -69,7 +69,7 @@
                         Game Developer and Software Engineer
                     </p>
                 </div>
-                    <h2>ver 1.18</h2>
+                    
                 <hr class="hrDotted" style="top:525px;">
             </div>
 
@@ -106,12 +106,88 @@
                     <br>
                     
                     <div class="projectVidContainer">
-                            <div class="vidContainer">
+                        <div class="vidContainer">
                             <div class="mainImage" id="muteYouTubeVideoPlayer"></div>
+                            <script async src="https://www.youtube.com/iframe_api"></script>
+                        </div>
+                    </div>
+                        
+                        <!--Main Description-->
+                        <p class="portfolio-description">
+                            A tower defense game with real time strategy and rogue-lite elements, in which you manage resources, grow out your grove, and defend against invasive enemies. <br><br>
+                            Solo-developed and currently in Alpha Play Test on Steam. <br>
+    
+                            <!--LINK TO STEAM PAGE // target="_blank" will open new window-->
+                            <a href="https://store.steampowered.com/app/2237280/Wild_Growth_TD/" target="_blank">Steam Link</a> 
+                        </p>
+                        <br>
+                        <div style="height:1px;"></div>
+
+                </div>
+    
+                <!--PROJECT 1 HIGHLIGHTS-->
+                <div class="breakdown-panel">
+                    
+                    <div class="leftArrowDiv">
+                        <button class="arrowBtnLeft">
+                            <img class="size100" src="images/leftArrow.png" alt="">
+                        </button>
+                    </div>
+
+                    <div class="breakdownImage">
+                        <img class="breakdownGif" src="Images/wg_main.gif" alt="">
+                    </div>
+                    
+                    <div class="breakdownText">
+                        <h2 class="breakdownTitle">Breakdown Title</h2>
+                        <ul class="portfolio-breakdown">
+                            <li class="list1">test 1</li>
+                            <li class="list2">test 2</li>
+                            <li class="list3">test 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rightArrowDiv">
+                        <button class ="arrowBtnRight">
+                            <img class="size100" src="images/rightArrow.png" alt="">
+                        </button>
+                    </div>   
+                </div>
+                
+                <div id="pBtns1" class="projectBtns">
+                    <button class="circleButton1">
+                        <img class="imageButton1" class="size100" src="images/circleSelected.png" alt="" >
+                    </button>
+                    <button class="circleButton2">
+                        <img class="imageButton2" src="images/circle.png" alt="">
+                    </button>
+                    <button class="circleButton3">
+                        <img class="imageButton3" src="images/circle.png" alt="">
+                    </button>
+                    <button class="circleButton4">
+                        <img class="imageButton4" src="images/circle.png" alt="">
+                    </button>
+                </div>
+                
+                <hr>
+                <div style="height:50px;"></div>
+
+
+                <!--PROJECT 2 - Fisher Frog-->
+                <div class="projectContainer">
+                    
+                    <h2 class="portfolio-title">Fisher Frog</h2>
+                    <br>
+                    
+                    <div class="projectVidContainer">
+                        <div class="vidContainer">
+                            <div class="mainImage" id="muteYouTubeVideoPlayer2"></div>
                             <script async src="https://www.youtube.com/iframe_api"></script>
                             <script>
                                 function onYouTubeIframeAPIReady() {
                                     var player;
+                                    var player2;
+
                                     player = new YT.Player('muteYouTubeVideoPlayer', {
                                         videoId: 'rRt9TbpfYYI', // YouTube Video ID
                                         width: 640,               // Player width (in px)
@@ -129,102 +205,129 @@
                                             autohide: 0,         // Hide video controls when playing
                                             
                                             playlist: "rRt9TbpfYYI"
-                                        },
-                                        events: {
-                                            onReady: function(e) {
-                                                e.target.mute();
-                                            }
-    
+                                        }
+                                    });
+
+                                    player2 = new YT.Player('muteYouTubeVideoPlayer2', {
+                                        videoId: '8rXa97GZG04', // YouTube Video ID
+                                        width: 640,               // Player width (in px)
+                                        height: 352,              // Player height (in px)
+                                        playerVars: {
+                                            mute: 1,
+                                            autoplay: 1,        // Auto-play the video on load
+                                            controls: 1,        // Show pause/play buttons in player
+                                            showinfo: 0,        // Hide the video title
+                                            modestbranding: 1,  // Hide the Youtube Logo
+                                            loop: 1,            // Run the video in a loop
+                                            fs: 1,              // Hide the full screen button
+                                            cc_load_policy: 0, // Hide closed captions
+                                            iv_load_policy: 3,  // Hide the Video Annotations
+                                            autohide: 0,         // Hide video controls when playing
+                                            
+                                            playlist: "8rXa97GZG04"
                                         }
                                     });
                                 }
                             </script>
-                            </div>
+                        </div>
                     </div>
                         
                         <!--Main Description-->
                         <p class="portfolio-description">
-                            A tower defense game with real time strategy and rogue-lite elements, in which you manage resources, grow out your grove, and defend against invasive enemies. <br><br>
-                            Solo-developed and currently in Alpha Play Test on Steam. <br>
+                            A calm mobile fishing game in which you cast out your line and try to catch as many fish as you can, while avoiding the dreaded shark.
+                            <br><br>Includes a leveling progression system, achievements, and an extra spearfishing mini-game in space. <br><br>
+                            Solo-developed and released on Iphone and Android. <br>
     
-                            <!--LINK TO STEAM PAGE // target="_blank" will open new window-->
-                            <a href="https://store.steampowered.com/app/2237280/Wild_Growth_TD/" target="_blank">Steam Link</a> 
+                            <!--LINK // target="_blank" will open new window-->
+                            <a href="https://apps.apple.com/us/app/fisher-frog/id1637661371" target="_blank">Apple Store Link</a> 
                         </p>
                         <br>
                         <div style="height:1px;"></div>
 
-                    </div>
+                </div>
     
-                    <!--PROJECT 1 HIGHLIGHTS-->
-                    <div class="breakdown-panel">
-                        
-                        <div class="leftArrowDiv">
-                            <button id="p1Left" class="arrowBtn">
-                                <img class="size100" src="images/leftArrow.png" alt="">
-                            </button>
-                        </div>
+                <!--PROJECT 2 HIGHLIGHTS-->
+                <div class="breakdown-panel">
+                    
+                    <div class="leftArrowDiv">
+                        <button class="arrowBtnLeft">
+                            <img class="size100" src="images/leftArrow.png" alt="">
+                        </button>
+                    </div>
 
-                        <div class="breakdownImage">
-                            <img id="breakdownGif" class="size100" src="Images/wg_main.gif" alt="">
-                        </div>
-                        
-                        <div class="breakdownText">
-                            <h2 class="breakdownTitle">Breakdown Title</h2>
-                            <ul class="portfolio-breakdown">
-                                <li class="list1">test 1</li>
-                                <li class="list2">test 2</li>
-                                <li class="list3">test 3</li>
-                            </ul>
-
-                        </div>
-                        
-                        <div class="rightArrowDiv">
-                            <button id="p1Right" class ="arrowBtn">
-                                <img class="size100" src="images/rightArrow.png" alt="">
-                            </button>
-                        </div>
-                        
+                    <div class="breakdownImage">
+                        <img class="breakdownGif" src="Images/wg_main.gif" alt="">
                     </div>
                     
-                    <div id="pBtns1" class="projectBtns">
-                        <button id="p1Btn1" class="circleButton">
-                            <img id="p1Img1" class="size100" src="images/circleSelected.png" alt="" >
-                        </button>
-                        <button id="p1Btn2" class="circleButton">
-                            <img id="p1Img2" src="images/circle.png" alt="">
-                        </button>
-                        <button id="p1Btn3" class="circleButton">
-                            <img id="p1Img3" src="images/circle.png" alt="">
-                        </button>
-                        <button id="p1Btn4" class="circleButton">
-                            <img id="p1Img4" src="images/circle.png" alt="">
-                        </button>
+                    <div class="breakdownText">
+                        <h2 class="breakdownTitle">Breakdown Title</h2>
+                        <ul class="portfolio-breakdown">
+                            <li class="list1">test 1</li>
+                            <li class="list2">test 2</li>
+                            <li class="list3">test 3</li>
+                        </ul>
                     </div>
                     
+                    <div class="rightArrowDiv">
+                        <button class ="arrowBtnRight">
+                            <img class="size100" src="images/rightArrow.png" alt="">
+                        </button>
+                    </div>   
+                </div>
+                
+                <div id="pBtns1" class="projectBtns">
+                    <button class="circleButton1">
+                        <img class="imageButton1" class="size100" src="images/circleSelected.png" alt="" >
+                    </button>
+                    <button class="circleButton2">
+                        <img class="imageButton2" src="images/circle.png" alt="">
+                    </button>
+                    <button class="circleButton3">
+                        <img class="imageButton3" src="images/circle.png" alt="">
+                    </button>
+                    <button class="circleButton4">
+                        <img class="imageButton4" src="images/circle.png" alt="">
+                    </button>
+                </div>
+                
+                <hr>
+                <div style="height:50px;"></div>
 
-                    
-                    <hr>
-                    <div style="height:50px;"></div>
 
-                    <div class="about-text" style="height:300px;">
-                        <!--PROJECT 2 - FISHER FROG-->
-                        <h2 class="portfolio-title">Project 2</h2>
-                        <div style="height:30px;"></div>
-                    </div>
 
-                 
-                    <div class="about-text" style="height:300px;">
-                        <!--Breakdown 3-->
-                        <h2 class="portfolio-title">Breakdown 1</h2>
-                        <div style="height:30px;"></div>
 
-                    </div>
+
+
+
+
+                <div class="about-text" style="height:300px;">
+                    <!--PROJECT 2 - FISHER FROG-->
+                    <h2 class="portfolio-title">Project 3</h2>
+                    <div style="height:30px;"></div>
+                </div>
+
+                
+                <div class="about-text" style="height:300px;">
+                    <!--Breakdown 3-->
+                    <h2 class="portfolio-title">Breakdown 1</h2>
+                    <div style="height:30px;"></div>
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
 
             <!--FOOTER PANEL-->
-            <div class="footer-panel">
-
+            <div class="footer-panel"> 
+                <h1>Footer Here</h1>
             </div> 
-            </div>
+            
     </body>
 
     <script src="mainScript.js"></script> <!--inject the code here after setting up the entire html structure-->

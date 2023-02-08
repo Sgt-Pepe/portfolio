@@ -309,26 +309,35 @@
 
 /*#region***********BUTTONS************/
 
-    .circleButton {
+    .circleButton1, .circleButton2, .circleButton3, .circleButton4 {
         background-color: transparent;
         border:0;
     }
 
-    .circleButton img {
+    .circleButton1 img, .circleButton2 img, .circleButton3 img, .circleButton4 img {
         height: 25px;
         width: 25px;
         padding: 5px 5px;
     }
 
-    .arrowBtn {
+    .imageButton1, .imageButton2, .imageButton3, .imageButton4 {
+        width: 100%;
+    } 
+
+    .arrowBtnLeft, .arrowBtnRight {
         background-color: transparent;
         border:0;
     }
 
-    .arrowBtn img {
+    .arrowBtnLeft img, .arrowBtnRight img {
         height: 50px;
         width: 50px;
         padding: 5px 5px;
+    }
+
+    .breakdownGif {
+        height:100%;
+        width:100%;
     }
 
 /*#endregion*/

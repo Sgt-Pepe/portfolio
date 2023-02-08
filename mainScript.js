@@ -8,22 +8,18 @@ let maxWidth = screen.width * .90;
 let project1_currentBtn = 0;
 let project2_currentBtn = 0;
 
-const project1LeftBtn = document.querySelector("#p1Left");
-const project1RightBtn = document.querySelector("#p1Right");
-const project1Btn1 = document.querySelector("#p1Btn1");
-const project1Btn2 = document.querySelector("#p1Btn2");
-const project1Btn3 = document.querySelector("#p1Btn3");
-const project1Btn4 = document.querySelector("#p1Btn4");
+const projectLeftBtn = document.getElementsByClassName('arrowBtnLeft');
+const projectRightBtn = document.getElementsByClassName('arrowBtnRight');
 
-const project1BtnImg1 = document.querySelector("#p1Img1");
-const project1BtnImg2 = document.querySelector("#p1Img2");
-const project1BtnImg3 = document.querySelector("#p1Img3");
-const project1BtnImg4 = document.querySelector("#p1Img4");
+const projectBtn1 = document.getElementsByClassName('circleButton1');
+const projectBtn2 = document.getElementsByClassName('circleButton2');
+const projectBtn3 = document.getElementsByClassName('circleButton3');
+const projectBtn4 = document.getElementsByClassName('circleButton4');
 
-//const project2Btn1 = document.querySelector("#p2Btn1");
-//const project2Btn2 = document.querySelector("#p2Btn2");
-//const project2Btn3 = document.querySelector("#p2Btn3");
-//const project2Btn4 = document.querySelector("#p2Btn4");
+const projectBtnImg1 = document.getElementsByClassName('imageButton1');
+const projectBtnImg2 = document.getElementsByClassName('imageButton2');
+const projectBtnImg3 = document.getElementsByClassName('imageButton3');
+const projectBtnImg4 = document.getElementsByClassName('imageButton4');
 //#endregion
 
 //#region PROJECT REFERENCES:
@@ -45,18 +41,19 @@ const list3 = document.getElementsByClassName('list3'); //CREATES AN ARRAY
 const breakdownTitle = document.getElementsByClassName('breakdownTitle'); //CREATES AN ARRAY
 const breakdownImages = document.getElementsByClassName('breakdownImage'); //CREATES AN ARRAY
 const breakdownText = document.getElementsByClassName('portfolio-breakdown'); //CREATES AN ARRAY
-const breakdownGIF = document.querySelector("#breakdownGif");
+
+const breakdownGIF = document.getElementsByClassName('breakdownGif'); //CREATES AN ARRAY
 //#endregion
 
 
-//#region PROJECT BUTTONS
+//#region PROJECT1 - WILD GROWTH TD
 
-    project1LeftBtn.onclick = Project1CycleLeft;
-    project1RightBtn.onclick = Project1CycleRight;
-    project1Btn1.onclick = Project1Breakdown1;
-    project1Btn2.onclick = Project1Breakdown2;
-    project1Btn3.onclick = Project1Breakdown3;
-    project1Btn4.onclick = Project1Breakdown4;
+    projectLeftBtn[0].onclick = Project1CycleLeft;
+    projectRightBtn[0].onclick = Project1CycleRight;
+    projectBtn1[0].onclick = Project1Breakdown1;
+    projectBtn2[0].onclick = Project1Breakdown2;
+    projectBtn3[0].onclick = Project1Breakdown3;
+    projectBtn4[0].onclick = Project1Breakdown4;
     Project1Breakdown1();
 
     function Project1Breakdown1(){
@@ -66,13 +63,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         list2[0].innerText = "Updates unit resource costs based on tree type";
         list3[0].innerText = "Allocates different global perks";
 
-        breakdownGIF.src="Images/wg_main.gif";
+        breakdownGIF[0].src="Images/wg_main.gif";
 
         //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
-        project1BtnImg1.src = "Images/circleSelected.png";
-        project1BtnImg2.src = "Images/circle.png";
-        project1BtnImg3.src = "Images/circle.png";
-        project1BtnImg4.src = "Images/circle.png";
+        projectBtnImg1[0].src = "Images/circleSelected.png";
+        projectBtnImg2[0].src = "Images/circle.png";
+        projectBtnImg3[0].src = "Images/circle.png";
+        projectBtnImg4[0].src = "Images/circle.png";
         project1_currentBtn = 0;
     }
 
@@ -83,13 +80,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         list2[0].innerText = "Updates tile interface with valid/invalid placement";
         list3[0].innerText = "Instantiates game object onto selected tile";
 
-        breakdownGIF.src="Images/buildingSystem.gif";
+        breakdownGIF[0].src="Images/buildingSystem.gif";
 
         //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
-        project1BtnImg1.src = "Images/circle.png";
-        project1BtnImg2.src = "Images/circleSelected.png";
-        project1BtnImg3.src = "Images/circle.png";
-        project1BtnImg4.src = "Images/circle.png";
+        projectBtnImg1[0].src = "Images/circle.png";
+        projectBtnImg2[0].src = "Images/circleSelected.png";
+        projectBtnImg3[0].src = "Images/circle.png";
+        projectBtnImg4[0].src = "Images/circle.png";
         project1_currentBtn = 1;
     }
 
@@ -100,13 +97,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         list2[0].innerText = "Resources are scattered in random positions and sizes";
         list3[0].innerText = "Events are randomly generated and positioned around the map";
 
-        breakdownGIF.src="Images/randomGeneration.gif";
+        breakdownGIF[0].src="Images/randomGeneration.gif";
 
         //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
-        project1BtnImg1.src = "Images/circle.png";
-        project1BtnImg2.src = "Images/circle.png";
-        project1BtnImg3.src = "Images/circleSelected.png";
-        project1BtnImg4.src = "Images/circle.png";
+        projectBtnImg1[0].src = "Images/circle.png";
+        projectBtnImg2[0].src = "Images/circle.png";
+        projectBtnImg3[0].src = "Images/circleSelected.png";
+        projectBtnImg4[0].src = "Images/circle.png";
         project1_currentBtn = 2;
     }
 
@@ -117,13 +114,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         list2[0].innerText = "Permanent unlockable upgrades";
         list3[0].innerText = "Positive and negative modifiers can be added, called 'Influences', which affect Score and playstyle";
 
-        breakdownGIF.src="Images/metaProgression.gif";
+        breakdownGIF[0].src="Images/metaProgression.gif";
 
         //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
-        project1BtnImg1.src = "Images/circle.png";
-        project1BtnImg2.src = "Images/circle.png";
-        project1BtnImg3.src = "Images/circle.png";
-        project1BtnImg4.src = "Images/circleSelected.png";
+        projectBtnImg1[0].src = "Images/circle.png";
+        projectBtnImg2[0].src = "Images/circle.png";
+        projectBtnImg3[0].src = "Images/circle.png";
+        projectBtnImg4[0].src = "Images/circleSelected.png";
         project1_currentBtn = 3;
     }
 
@@ -182,6 +179,142 @@ const breakdownGIF = document.querySelector("#breakdownGif");
             }
         }
     }
+
+//#endregion
+
+//#region PROJECT2 - FISHER FROG
+
+projectLeftBtn[1].onclick = Project2CycleLeft;
+projectRightBtn[1].onclick = Project2CycleRight;
+projectBtn1[1].onclick = Project2Breakdown1;
+projectBtn2[1].onclick = Project2Breakdown2;
+projectBtn3[1].onclick = Project2Breakdown3;
+projectBtn4[1].onclick = Project2Breakdown4;
+Project2Breakdown1();
+
+function Project2Breakdown1(){
+    breakdownTitle[1].innerText = "Fishing System";
+
+    list1[1].innerText = "Hold finger down on screen and move left/right to adjust hook position";
+    list2[1].innerText = "An adjustable line renderer with a collider acts as the fishing line";
+    list3[1].innerText = "Different fishing rods and lures affect reel in speed and fishing response";
+
+    breakdownGIF[1].src="Images/fishing.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[1].src = "Images/circleSelected.png";
+    projectBtnImg2[1].src = "Images/circle.png";
+    projectBtnImg3[1].src = "Images/circle.png";
+    projectBtnImg4[1].src = "Images/circle.png";
+    project2_currentBtn = 0;
+}
+
+function Project2Breakdown2(){
+    breakdownTitle[1].innerText = "Upgrade System";
+
+    list1[1].innerText = "Click on screen to throw out spear to target position";
+    list2[1].innerText = "Asteroids collide with spear and can be blown up with dynamite";
+    list3[1].innerText = "Different spears affect throwing speed and reel in speed";
+
+    breakdownGIF[1].src="Images/upgrade.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[1].src = "Images/circle.png";
+    projectBtnImg2[1].src = "Images/circleSelected.png";
+    projectBtnImg3[1].src = "Images/circle.png";
+    projectBtnImg4[1].src = "Images/circle.png";
+    project2_currentBtn = 1;
+}
+
+function Project2Breakdown3(){
+    breakdownTitle[1].innerText = "Wardrobe";
+
+    list1[1].innerText = "Different characters and fishing equipment can be unlocked";
+    list2[1].innerText = "Fishing rods, lures and spears each have unique modifiers";
+    list3[1].innerText = "Pets can be unlocked which give a small bonus to fishing";
+
+    breakdownGIF[1].src="Images/wardrobe.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[1].src = "Images/circle.png";
+    projectBtnImg2[1].src = "Images/circle.png";
+    projectBtnImg3[1].src = "Images/circleSelected.png";
+    projectBtnImg4[1].src = "Images/circle.png";
+    project2_currentBtn = 2;
+}
+
+function Project2Breakdown4(){
+    breakdownTitle[1].innerText = "Achievements";
+
+    list1[1].innerText = "Achievements are tracked for various objectives in the game";
+    list2[1].innerText = "Experience and currency are rewarded upon completing an achievement";
+    list3[1].innerText = "All achievements and progress are saved through JSON";
+
+    breakdownGIF[1].src="Images/achievementSystem.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[1].src = "Images/circle.png";
+    projectBtnImg2[1].src = "Images/circle.png";
+    projectBtnImg3[1].src = "Images/circle.png";
+    projectBtnImg4[1].src = "Images/circleSelected.png";
+    project2_currentBtn = 3;
+}
+
+function Project2CycleLeft(){
+    switch(project2_currentBtn){
+        case 0:
+        {
+            Project2Breakdown4();
+            break;
+        }
+
+        case 1:
+        {
+            Project2Breakdown1();
+            break;
+        }
+
+        case 2:
+        {
+            Project2Breakdown2();
+            break;
+        }
+
+        case 3:
+        {
+            Project2Breakdown3();
+            break;
+        }
+    }
+}
+
+function Project2CycleRight(){
+    switch(project2_currentBtn){
+        case 0:
+        {
+            Project2Breakdown2();
+            break;
+        }
+
+        case 1:
+        {
+            Project2Breakdown3();
+            break;
+        }
+
+        case 2:
+        {
+            Project2Breakdown4();
+            break;
+        }
+
+        case 3:
+        {
+            Project2Breakdown1();
+            break;
+        }
+    }
+}
 
 //#endregion
 
