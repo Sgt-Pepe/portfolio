@@ -212,9 +212,13 @@ function Project2Breakdown1(){
 function Project2Breakdown2(){
     breakdownTitle[1].innerText = "Upgrade System";
 
-    list1[1].innerText = "Click on screen to throw out spear to target position";
-    list2[1].innerText = "Asteroids collide with spear and can be blown up with dynamite";
-    list3[1].innerText = "Different spears affect throwing speed and reel in speed";
+    list1[1].innerText = "Various upgrades for fishing and crew members using Talent Points";
+    list2[1].innerText = "Talent points are awarded on leveling up";
+    list3[1].innerText = "Some talents vastly change gameplay experience, such as having two fishing lines";
+
+    //list1[1].innerText = "Click on screen to throw out spear to target position";
+    //list2[1].innerText = "Asteroids collide with spear and can be blown up with dynamite";
+    //list3[1].innerText = "Different spears affect throwing speed and reel in speed";
 
     breakdownGIF[1].src="Images/upgrade.gif";
 
