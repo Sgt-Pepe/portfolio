@@ -297,6 +297,10 @@ const breakdownGIF = document.querySelector("#breakdownGif");
             breakdownPanel[i].insertBefore(rightArrow[i], breakdownImages[i]);
         }
 
+        for(i = 0; i < projectButtons.length; i++){
+            projectButtons[i].style.width = "100%";
+        }
+
     }
 
     function ScaleUpBreakdownPanel(){
@@ -320,6 +324,10 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         for(i = 0; i < rightArrow.length; i++){
             rightArrow[i].style.float = "left";
             breakdownPanel[i].insertBefore(rightArrow[i], null); //PARENT NODE.insertBefore(MoveThisElement, MoveItBeforeThis (null == end of parent node))
+        }
+
+        for(i = 0; i < projectButtons.length; i++){
+            projectButtons[i].style.width = "50%";
         }
         
     }
