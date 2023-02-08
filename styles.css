@@ -44,7 +44,7 @@
         margin:0;
     }
 
-    p {
+    p, ul {
         color:#F0F5F9;
         margin:0;
     }
@@ -147,6 +147,7 @@
         width: 80%;
     }
 
+
 /*#endregion*/
 
 /*#region*********ABOUT ME PANEL*****/
@@ -241,15 +242,15 @@
 
     .leftArrowDiv{
         float: left;
-        width: 10%;
-        padding: 50px 5px;
+        width: 7%;
+        padding: 90px 5px;
     }
 
     .rightArrowDiv{
         position:relative;
         float:left;
-        width: 10%;
-        padding: 50px 5px;
+        width: 7%;
+        padding: 90px 10px;
         padding-right: 55px;
     }
 
@@ -260,10 +261,15 @@
         margin: 0;
     }
 
+    .list1, .list2, .list3 {
+        line-height:1.5;
+        margin-left: 1em;
+    }
+
     .breakdownTitle { 
         font-size: 120%; 
         text-align:center;
-        padding: 10px 10px;
+        padding: 5px 10px;
     }
 
     .portfolio-breakdown {
@@ -271,6 +277,7 @@
         font-size: 100%; 
         text-align:justify;
         padding: 10px 10px;
+        line-height:150%;
     }
 
     .breakdownImage { 
@@ -284,6 +291,7 @@
 
     .projectBtns {
         padding: 0px 10px;
+        padding-bottom: 25px;
         width:50%;
         margin: 0 auto;
         text-align: center;

@@ -1,7 +1,7 @@
 //#region WINDOW VARIABLES:
 let w = window.innerWidth;
 let h = window.innerHeight;
-let maxWidth = screen.width * .96;
+let maxWidth = screen.width * .90;
 //#endregion
 
 //#region PROJECT BREAKDOWN
@@ -38,6 +38,9 @@ const breakdownPanel = document.getElementsByClassName('breakdown-panel'); //CRE
 const leftArrow = document.getElementsByClassName('leftArrowDiv'); //CREATES AN ARRAY
 const rightArrow = document.getElementsByClassName('rightArrowDiv'); //CREATES AN ARRAY
 const breakdownTextPanel = document.getElementsByClassName('breakdownText'); //CREATES AN ARRAY
+const list1 = document.getElementsByClassName('list1'); //CREATES AN ARRAY
+const list2 = document.getElementsByClassName('list2'); //CREATES AN ARRAY
+const list3 = document.getElementsByClassName('list3'); //CREATES AN ARRAY
 
 const breakdownTitle = document.getElementsByClassName('breakdownTitle'); //CREATES AN ARRAY
 const breakdownImages = document.getElementsByClassName('breakdownImage'); //CREATES AN ARRAY
@@ -57,58 +60,70 @@ const breakdownGIF = document.querySelector("#breakdownGif");
     Project1Breakdown1();
 
     function Project1Breakdown1(){
-        breakdownTitle[0].innerText = "Character Select System"
-        breakdownText[0].innerText = "Changing tree type at start dynamically updates starting resources, changes certain unit resource costs, and gives different global perks."
+        breakdownTitle[0].innerText = "Character Select System";
+
+        list1[0].innerText = "Dynamically updates starting resources";
+        list2[0].innerText = "Updates unit resource costs based on tree type";
+        list3[0].innerText = "Allocates different global perks";
+
         breakdownGIF.src="Images/wg_main.gif";
 
+        //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
         project1BtnImg1.src = "Images/circleSelected.png";
         project1BtnImg2.src = "Images/circle.png";
         project1BtnImg3.src = "Images/circle.png";
         project1BtnImg4.src = "Images/circle.png";
-
         project1_currentBtn = 0;
     }
 
     function Project1Breakdown2(){
-        breakdownTitle[0].innerText = "Breakdown Title 2"
-        breakdownText[0].innerText = "Breakdown description 2. Testing different sizes of text."
-        breakdownGIF.src="Images/wg_main.gif";
+        breakdownTitle[0].innerText = "Building Grid System";
 
+        list1[0].innerText = "Checks resource costs and unit size";
+        list2[0].innerText = "Updates tile interface with valid/invalid placement";
+        list3[0].innerText = "Instantiates game object onto selected tile";
+
+        breakdownGIF.src="Images/buildingSystem.gif";
+
+        //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
         project1BtnImg1.src = "Images/circle.png";
         project1BtnImg2.src = "Images/circleSelected.png";
         project1BtnImg3.src = "Images/circle.png";
         project1BtnImg4.src = "Images/circle.png";
-
         project1_currentBtn = 1;
     }
 
     function Project1Breakdown3(){
-        //let btnImage = project1Btn3.getElementsByTagName("img");
+        breakdownTitle[0].innerText = "Random Generation";
 
-        breakdownTitle[0].innerText = "Breakdown Title 3 with long title"
-        breakdownText[0].innerText = "Breakdown description 3. Testing different sizes of text. This will be a much longer explanation of what the breakdown does."
-        breakdownGIF.src="Images/wg_main.gif";
+        list1[0].innerText = "Randomly generated maps";
+        list2[0].innerText = "Resources are scattered in random positions and sizes";
+        list3[0].innerText = "Events are randomly generated and positioned around the map";
 
+        breakdownGIF.src="Images/randomGeneration.gif";
+
+        //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
         project1BtnImg1.src = "Images/circle.png";
         project1BtnImg2.src = "Images/circle.png";
         project1BtnImg3.src = "Images/circleSelected.png";
         project1BtnImg4.src = "Images/circle.png";
-
         project1_currentBtn = 2;
     }
 
     function Project1Breakdown4(){
-        //let btnImage = project1Btn3.getElementsByTagName("img");
+        breakdownTitle[0].innerText = "Meta Progression System";
 
-        breakdownTitle[0].innerText = "Breakdown Title 4"
-        breakdownText[0].innerText = "Breakdown description 4."
-        breakdownGIF.src="Images/wg_main.gif";
+        list1[0].innerText = 'A meta currency called "Silt" is gained on Victory/Defeat';
+        list2[0].innerText = "Permanent unlockable upgrades";
+        list3[0].innerText = "Positive and negative modifiers can be added, called 'Influences', which affect Score and playstyle";
 
+        breakdownGIF.src="Images/metaProgression.gif";
+
+        //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
         project1BtnImg1.src = "Images/circle.png";
         project1BtnImg2.src = "Images/circle.png";
         project1BtnImg3.src = "Images/circle.png";
         project1BtnImg4.src = "Images/circleSelected.png";
-
         project1_currentBtn = 3;
     }
 
@@ -225,13 +240,15 @@ const breakdownGIF = document.querySelector("#breakdownGif");
 
         for(i = 0; i < projectText.length; i++){  
             projectText[i].style.width = "100%";
+            projectText[i].style.padding = "0"; 
             projectText[i].style.paddingTop = "10px"; 
         }
 
         for(i = 0; i < projectTitle.length; i++){
             projectTitle[i].style.width = "90%";
             projectTitle[i].style.textAlign = "center";
-            projectTitle[i].style.paddingTop = "0px";
+            projectTitle[i].style.padding = "5px 0px";
+            //projectTitle[i].style.paddingTop = "0px";
         }
     }
 
@@ -244,6 +261,7 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         for(i = 0; i < breakdownText.length; i++){
             projectText[i].style.width = "50%";
             projectText[i].style.float = "right"; 
+            projectText[i].style.padding = "0 20px"; 
             projectText[i].style.paddingTop = "20px"; 
         }
 
@@ -251,6 +269,7 @@ const breakdownGIF = document.querySelector("#breakdownGif");
             projectTitle[i].style.width = "50%";
             projectTitle[i].style.float = "right"; 
             projectTitle[i].style.textAlign = "left";
+            projectTitle[i].style.padding = "0 20px";
             projectTitle[i].style.paddingTop = "20px";
         }
     }
@@ -265,7 +284,6 @@ const breakdownGIF = document.querySelector("#breakdownGif");
             breakdownTextPanel[i].style.width = "80%";
             breakdownTextPanel[i].style.margin = "0 auto";
             breakdownTextPanel[i].style.float ="none";
-            
         }
 
         for(i = 0; i < breakdownImages.length; i++){
@@ -288,13 +306,13 @@ const breakdownGIF = document.querySelector("#breakdownGif");
         }
 
         for(i = 0; i < breakdownTextPanel.length; i++){
-            breakdownTextPanel[i].style.width = "40%";
+            breakdownTextPanel[i].style.width = "35%";
             breakdownTextPanel[i].style.margin = "0";
             breakdownTextPanel[i].style.float ="left";
         }
 
         for(i = 0; i < breakdownImages.length; i++){
-            breakdownImages[i].style.width = "40%";
+            breakdownImages[i].style.width = "44%";
             breakdownImages[i].style.margin = "0";
             breakdownImages[i].style.float = "left";
         }
