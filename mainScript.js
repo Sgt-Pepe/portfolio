@@ -187,7 +187,7 @@ const breakdownGIF = document.querySelector("#breakdownGif");
 
 //#region WINDOW RESIZING METHODS
 
-    if(window.matchMedia("(max-width: 767px)").matches) {
+    if(window.matchMedia("(max-width: 900px)").matches) {
         //viewport is less than 768 pixels wide
         console.log("MOBILE DEVICE");
             ScaleDownAboutText();
