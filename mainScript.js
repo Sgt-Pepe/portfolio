@@ -334,15 +334,15 @@ function Project2CycleRight(){
     else {
         console.log("NON MOBILE DEVICE");
         CheckWindowSize();
-    }
 
-    //EVENT CALLED WHENEVER SCREEN IS RESIZED:
-    window.addEventListener('resize', function(event){ //Adding an event listener (NEVER OVERRIDE THE WINDOW ONRESIZE FUNCTION)
-        w = window.innerWidth;
-        console.log(maxWidth);
-        console.log(w);
-        CheckWindowSize();
-    }, true)
+        //EVENT CALLED WHENEVER SCREEN IS RESIZED:
+        window.addEventListener('resize', function(event){ //Adding an event listener (NEVER OVERRIDE THE WINDOW ONRESIZE FUNCTION)
+            w = window.innerWidth;
+            console.log(maxWidth);
+            console.log(w);
+            CheckWindowSize();
+        }, true)
+    }
 
     function CheckWindowSize(){
         if(w < maxWidth){
