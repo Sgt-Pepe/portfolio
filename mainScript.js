@@ -7,6 +7,7 @@ let maxWidth = screen.width * .90;
 //#region PROJECT BREAKDOWN
 let project1_currentBtn = 0;
 let project2_currentBtn = 0;
+let project3_currentBtn = 0;
 
 const projectLeftBtn = document.getElementsByClassName('arrowBtnLeft');
 const projectRightBtn = document.getElementsByClassName('arrowBtnRight');
@@ -322,6 +323,149 @@ function Project2CycleRight(){
 
 //#endregion
 
+//#region PROJECT3 - PROJECT GENJIN
+
+projectLeftBtn[2].onclick = Project3CycleLeft;
+projectRightBtn[2].onclick = Project3CycleRight;
+projectBtn1[2].onclick = Project3Breakdown1;
+projectBtn2[2].onclick = Project3Breakdown2;
+projectBtn3[2].onclick = Project3Breakdown3;
+projectBtn4[2].onclick = Project3Breakdown4;
+Project3Breakdown1();
+
+function Project3Breakdown1(){
+    breakdownTitle[2].innerText = "Inventory System";
+
+    list1[2].innerText = "Rearrangeable inventory slot system with upgradeable bags";
+    list2[2].innerText = "Items can be dropped, picked up, equipped, and consumed depending on item type";
+    list3[2].innerText = "Item placement within inventory and storage is saved using JSON";
+
+    //breakdownGIF[2].src="https://giphy.com/gifs/41uJ0VTPJLw8llEUsD";
+    breakdownGIF[2].src="https://media.giphy.com/media/41uJ0VTPJLw8llEUsD/giphy-downsized-large.gif";
+    //<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/41uJ0VTPJLw8llEUsD" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/41uJ0VTPJLw8llEUsD">via GIPHY</a></p>
+    //<iframe src="https://giphy.com/embed/41uJ0VTPJLw8llEUsD" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/41uJ0VTPJLw8llEUsD">via GIPHY</a></p>
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[2].src = "Images/circleSelected.png";
+    projectBtnImg2[2].src = "Images/circle.png";
+    projectBtnImg3[2].src = "Images/circle.png";
+    projectBtnImg4[2].src = "Images/circle.png";
+    project3_currentBtn = 0;
+}
+
+function Project3Breakdown2(){
+    breakdownTitle[2].innerText = "Equipment System";
+
+    list1[2].innerText = "Items with tag 'equipement' can be equipped in the Character panel";
+    list2[2].innerText = "Equipement is worn in the correct slot depending on enum type (head, chest, main weapon, off-hand, etc.)";
+    list3[2].innerText = "Equipped items are saved and loaded using JSON";
+
+    //list1[1].innerText = "Click on screen to throw out spear to target position";
+    //list2[1].innerText = "Asteroids collide with spear and can be blown up with dynamite";
+    //list3[1].innerText = "Different spears affect throwing speed and reel in speed";
+
+    breakdownGIF[2].src="https://media.giphy.com/media/FImNrg2o2Syha7SN4b/giphy.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[2].src = "Images/circle.png";
+    projectBtnImg2[2].src = "Images/circleSelected.png";
+    projectBtnImg3[2].src = "Images/circle.png";
+    projectBtnImg4[2].src = "Images/circle.png";
+    project3_currentBtn = 1;
+}
+
+function Project3Breakdown3(){
+    breakdownTitle[2].innerText = "Quest/Dialogue";
+
+    list1[2].innerText = "Quest dialogue for NPCs is highlighted in yellow";
+    list2[2].innerText = "The Journal tracks quest progress and completion status dynamically";
+    list3[2].innerText = "Quests can be turned in when completed and provide a reward. Quest progression is saved and loaded";
+
+    breakdownGIF[2].src="https://media.giphy.com/media/ztagTOKFzNnQ63Ptdw/giphy.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[2].src = "Images/circle.png";
+    projectBtnImg2[2].src = "Images/circle.png";
+    projectBtnImg3[2].src = "Images/circleSelected.png";
+    projectBtnImg4[2].src = "Images/circle.png";
+    project3_currentBtn = 2;
+}
+
+function Project3Breakdown4(){
+    breakdownTitle[2].innerText = "Fishing Mini-Game";
+
+    list1[2].innerText = "The fishing mini-game consists of depleting the fish's stamina before the line breaks";
+    list2[2].innerText = "Fishing requires a fishing rod to be equipped with the proper bait";
+    list3[2].innerText = "Deplete a fish's stamina by following the prompts on the screen (by moving the rod left or right)";
+
+    breakdownGIF[2].src="https://media.giphy.com/media/IwG96NDzg0XSwhHzwQ/giphy.gif";
+
+    //UPDATE SELECTED BUTTON AND CLEAR OTHER BUTTONS:
+    projectBtnImg1[2].src = "Images/circle.png";
+    projectBtnImg2[2].src = "Images/circle.png";
+    projectBtnImg3[2].src = "Images/circle.png";
+    projectBtnImg4[2].src = "Images/circleSelected.png";
+    project3_currentBtn = 3;
+}
+
+function Project3CycleLeft(){
+    switch(project3_currentBtn){
+        case 0:
+        {
+            Project3Breakdown4();
+            break;
+        }
+
+        case 1:
+        {
+            Project3Breakdown1();
+            break;
+        }
+
+        case 2:
+        {
+            Project3Breakdown2();
+            break;
+        }
+
+        case 3:
+        {
+            Project3Breakdown3();
+            break;
+        }
+    }
+}
+
+function Project3CycleRight(){
+    switch(project3_currentBtn){
+        case 0:
+        {
+            Project3Breakdown2();
+            break;
+        }
+
+        case 1:
+        {
+            Project3Breakdown3();
+            break;
+        }
+
+        case 2:
+        {
+            Project3Breakdown4();
+            break;
+        }
+
+        case 3:
+        {
+            Project3Breakdown1();
+            break;
+        }
+    }
+}
+
+//#endregion
+
 //#region WINDOW RESIZING METHODS
 
     if(window.matchMedia("(max-width: 900px)").matches) {
@@ -336,7 +480,7 @@ function Project2CycleRight(){
         CheckWindowSize();
 
     }
-    
+
     //EVENT CALLED WHENEVER SCREEN IS RESIZED:
     window.addEventListener('resize', function(event){ //Adding an event listener (NEVER OVERRIDE THE WINDOW ONRESIZE FUNCTION)
         w = window.innerWidth;

@@ -183,52 +183,6 @@
                         <div class="vidContainer">
                             <div class="mainImage" id="muteYouTubeVideoPlayer2"></div>
                             <script async src="https://www.youtube.com/iframe_api"></script>
-                            <script>
-                                function onYouTubeIframeAPIReady() {
-                                    var player;
-                                    var player2;
-
-                                    player = new YT.Player('muteYouTubeVideoPlayer', {
-                                        videoId: 'rRt9TbpfYYI', // YouTube Video ID
-                                        width: 640,               // Player width (in px)
-                                        height: 352,              // Player height (in px)
-                                        playerVars: {
-                                            mute: 1,
-                                            autoplay: 1,        // Auto-play the video on load
-                                            controls: 1,        // Show pause/play buttons in player
-                                            showinfo: 0,        // Hide the video title
-                                            modestbranding: 1,  // Hide the Youtube Logo
-                                            loop: 1,            // Run the video in a loop
-                                            fs: 1,              // Hide the full screen button
-                                            cc_load_policy: 0, // Hide closed captions
-                                            iv_load_policy: 3,  // Hide the Video Annotations
-                                            autohide: 0,         // Hide video controls when playing
-                                            
-                                            playlist: "rRt9TbpfYYI"
-                                        }
-                                    });
-
-                                    player2 = new YT.Player('muteYouTubeVideoPlayer2', {
-                                        videoId: '8rXa97GZG04', // YouTube Video ID
-                                        width: 640,               // Player width (in px)
-                                        height: 352,              // Player height (in px)
-                                        playerVars: {
-                                            mute: 1,
-                                            autoplay: 1,        // Auto-play the video on load
-                                            controls: 1,        // Show pause/play buttons in player
-                                            showinfo: 0,        // Hide the video title
-                                            modestbranding: 1,  // Hide the Youtube Logo
-                                            loop: 1,            // Run the video in a loop
-                                            fs: 1,              // Hide the full screen button
-                                            cc_load_policy: 0, // Hide closed captions
-                                            iv_load_policy: 3,  // Hide the Video Annotations
-                                            autohide: 0,         // Hide video controls when playing
-                                            
-                                            playlist: "8rXa97GZG04"
-                                        }
-                                    });
-                                }
-                            </script>
                         </div>
                     </div>
                         
@@ -293,34 +247,143 @@
                 <hr>
                 <div style="height:50px;"></div>
 
+                <!--PROJECT 3 - PROJECT GENJIN-->
+                <div class="projectContainer">
+                    
+                    <h2 class="portfolio-title">Project Genjin</h2>
+                    <br>
+                    
+                    <div class="projectVidContainer">
+                        <div class="vidContainer">
+                            <div class="mainImage" id="muteYouTubeVideoPlayer3"></div>
+                            <script async src="https://www.youtube.com/iframe_api"></script>
+                            <script>
+                                function onYouTubeIframeAPIReady() {
+                                    var player;
+                                    var player2;
+                                    var player3;
 
+                                    player = new YT.Player('muteYouTubeVideoPlayer', {
+                                        videoId: 'rRt9TbpfYYI', // YouTube Video ID
+                                        width: 640,               // Player width (in px)
+                                        height: 352,              // Player height (in px)
+                                        playerVars: {
+                                            mute: 1,
+                                            autoplay: 1,        // Auto-play the video on load
+                                            controls: 1,        // Show pause/play buttons in player
+                                            showinfo: 0,        // Hide the video title
+                                            modestbranding: 1,  // Hide the Youtube Logo
+                                            loop: 1,            // Run the video in a loop
+                                            fs: 1,              // Hide the full screen button
+                                            cc_load_policy: 0, // Hide closed captions
+                                            iv_load_policy: 3,  // Hide the Video Annotations
+                                            autohide: 0,         // Hide video controls when playing
+                                            playlist: "rRt9TbpfYYI"
+                                        }
+                                    });
 
+                                    player2 = new YT.Player('muteYouTubeVideoPlayer2', {
+                                        videoId: '8rXa97GZG04', // YouTube Video ID
+                                        width: 640,               // Player width (in px)
+                                        height: 352,              // Player height (in px)
+                                        playerVars: {
+                                            mute: 1,
+                                            autoplay: 1,        // Auto-play the video on load
+                                            controls: 1,        // Show pause/play buttons in player
+                                            showinfo: 0,        // Hide the video title
+                                            modestbranding: 1,  // Hide the Youtube Logo
+                                            loop: 1,            // Run the video in a loop
+                                            fs: 1,              // Hide the full screen button
+                                            cc_load_policy: 0, // Hide closed captions
+                                            iv_load_policy: 3,  // Hide the Video Annotations
+                                            autohide: 0,         // Hide video controls when playing 
+                                            playlist: "8rXa97GZG04"
+                                        }
+                                    });
 
+                                    player3 = new YT.Player('muteYouTubeVideoPlayer3', {
+                                        videoId: 'ARxiLtRTfIQ', // YouTube Video ID
+                                        width: 640,               // Player width (in px)
+                                        height: 352,              // Player height (in px)
+                                        playerVars: {
+                                            mute: 1,
+                                            autoplay: 1,        // Auto-play the video on load
+                                            controls: 1,        // Show pause/play buttons in player
+                                            showinfo: 0,        // Hide the video title
+                                            modestbranding: 1,  // Hide the Youtube Logo
+                                            loop: 1,            // Run the video in a loop
+                                            fs: 1,              // Hide the full screen button
+                                            cc_load_policy: 0, // Hide closed captions
+                                            iv_load_policy: 3,  // Hide the Video Annotations
+                                            autohide: 0,         // Hide video controls when playing
+                                            playlist: "ARxiLtRTfIQ"
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                    </div>
+                        
+                        <!--Main Description-->
+                        <p class="portfolio-description">
+                            A 2D RPG prototype (extremely unpolished) with several systems in place: combat, quest and dialogue, inventory, equipment, spells, save/load, and a fishing mini-game.
+                            <br><br>
+                            Solo-developed - rough prototype. <br>
+                        </p>
+                        <br>
+                        <div style="height:1px;"></div>
 
-
-
-
-                <div class="about-text" style="height:300px;">
-                    <!--PROJECT 2 - FISHER FROG-->
-                    <h2 class="portfolio-title">Project 3</h2>
-                    <div style="height:30px;"></div>
                 </div>
+    
+                <!--PROJECT 3 HIGHLIGHTS-->
+                <div class="breakdown-panel">
+                    
+                    <div class="leftArrowDiv">
+                        <button class="arrowBtnLeft">
+                            <img class="size100" src="images/leftArrow.png" alt="">
+                        </button>
+                    </div>
 
+                    <div class="breakdownImage">
+                        <img class="breakdownGif" src="" alt="">
+                    </div>
+                    
+                    <div class="breakdownText">
+                        <h2 class="breakdownTitle">Breakdown Title</h2>
+                        <ul class="portfolio-breakdown">
+                            <li class="list1">test 1</li>
+                            <li class="list2">test 2</li>
+                            <li class="list3">test 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rightArrowDiv">
+                        <button class ="arrowBtnRight">
+                            <img class="size100" src="images/rightArrow.png" alt="">
+                        </button>
+                    </div>   
+                </div>
                 
-                <div class="about-text" style="height:300px;">
-                    <!--Breakdown 3-->
-                    <h2 class="portfolio-title">Breakdown 1</h2>
-                    <div style="height:30px;"></div>
-
+                <div id="pBtns1" class="projectBtns">
+                    <button class="circleButton1">
+                        <img class="imageButton1" class="size100" src="images/circleSelected.png" alt="" >
+                    </button>
+                    <button class="circleButton2">
+                        <img class="imageButton2" src="images/circle.png" alt="">
+                    </button>
+                    <button class="circleButton3">
+                        <img class="imageButton3" src="images/circle.png" alt="">
+                    </button>
+                    <button class="circleButton4">
+                        <img class="imageButton4" src="images/circle.png" alt="">
+                    </button>
                 </div>
+                
+                <hr>
+                <div style="height:50px;"></div>
 
 
-
-
-
-
-
-            </div>
+            </div> <!--END PROJECT PANEL-->
 
 
             <!--FOOTER PANEL-->

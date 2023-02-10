@@ -340,6 +340,11 @@
         width:100%;
     }
 
+    .breakdownGif img {
+        height:100%;
+        width: 100%;
+    }
+
 /*#endregion*/
 
 /*#region***********_************/
