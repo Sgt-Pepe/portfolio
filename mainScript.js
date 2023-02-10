@@ -24,6 +24,7 @@ const projectBtnImg4 = document.getElementsByClassName('imageButton4');
 //#endregion
 
 //#region PROJECT REFERENCES:
+const navBar = document.getElementsByClassName('navBarUL');
 const aboutText = document.getElementsByClassName('about-text');
 
 const projectTitle = document.getElementsByClassName('portfolio-title'); //CREATES AN ARRAY
@@ -506,11 +507,19 @@ function Project3CycleRight(){
         for(i = 0; i < aboutText.length; i++){
             aboutText[i].style.width = "40%";
         }
+
+        for(i = 0; i < navBar.length; i++){
+            navBar[i].style.width = "30%";
+        }
     }
 
     function ScaleDownAboutText(){
         for(i = 0; i < aboutText.length; i++){
             aboutText[i].style.width = "90%";
+        }
+
+        for(i = 0; i < navBar.length; i++){
+            navBar[i].style.width = "75%";
         }
     }
 
@@ -541,8 +550,8 @@ function Project3CycleRight(){
         }
 
         for(i = 0; i < breakdownText.length; i++){
-            projectText[i].style.width = "50%";
-            projectText[i].style.float = "right"; 
+            projectText[i].style.width = "40%";
+            projectText[i].style.float = "left"; 
             projectText[i].style.padding = "0 20px"; 
             projectText[i].style.paddingTop = "20px"; 
         }

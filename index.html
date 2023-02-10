@@ -19,34 +19,6 @@
     <head>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-
-        <!--
-            <style>
-    
-                @media only screen and (max-width: 620px) {
-                    /* For mobile phones: */
-                    .about-text {
-                        width: 90%;
-                    }
-                    
-                    .projectVidContainer {
-                        width: 90%;
-                        float: none;
-                    }
-    
-                    .portfolio-description {
-                        width: 90%;
-                        padding-top: 10px;
-                    }
-    
-                    .portfolio-title {
-                        width: 90%;
-                        text-align: center;
-                        padding-top: 0;
-                    }
-                  }
-            </style>
-        -->
         
         <title>Matthew Krassowski</title> 
 
@@ -60,8 +32,31 @@
     <body>
         <center>
             
+            <!--HOME BUTTON-->
+            <div style="width:40px; height: 35px; float:left; position:fixed;">
+                <button style="background-color:transparent; border:none;" onclick="window.location.href='#home'">
+                    <img src="Images/dev_icon.png" alt="" style="width:100%; height:100%;">
+                </button>
+            </div>
+
+            <!--NAV BAR-->
+            <div class="navBarUL">
+                <button class="navBarButton" onclick="window.location.href='#aboutMe'"> <!--onclick="window.location.href='#aboutMe'"-->
+                    <div class="centerText">About Me</div>
+                </button>
+
+                <button class="navBarButton" onclick="window.location.href='#portfolio'">
+                    <div class="centerText">Portfolio</div>
+                </button>
+
+                <button class="navBarButton">
+                    <a class="centerText" href="mailto:mattkrassow@gmail.com">Contact Me</a>
+                </button>
+            </div>
+
             <!--TITLE PANEL-->
-            <div class="title-panel"> <!--div is a content division modifier-->
+            <div id="home" class="title-panel"> <!--div is a content division modifier-->
+
                 <div class="title-text">
                     <h3 style="padding:5px 5px;">Hello! I'm</h3>
                     <h1>Matthew Krassowski</h1>
@@ -74,7 +69,7 @@
             </div>
 
             <!--ABOUT PANEL-->
-            <div class="about-panel">
+            <div id="aboutMe" class="about-panel">
                 <div>
                     <h1>About Me</h1>
 
@@ -89,12 +84,46 @@
                     </div>
                 </div>
 
+                <div style="padding-bottom:200px;">
+                    <h1>Skills</h1>
+                    <table class="skills-text">
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        C#
+                                    </li>
+                                    <li>
+                                        Java
+                                    </li>
+                                    <li>
+                                        Unity
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        HTML
+                                    </li>
+                                    <li>
+                                        CSS
+                                    </li>
+                                    <li>
+                                        Javascript
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
                 <hr class="hrDotted">
             </div>
         </center>
 
             <!--PORTFOLIO PANEL-->
-            <div class="portfolio-panel">
+            <div id="portfolio" class="portfolio-panel">
     
                 <h1 style="text-align:center;">Portfolio</h1>
                 <div style="height:25px;"></div>
@@ -189,7 +218,7 @@
                         <!--Main Description-->
                         <p class="portfolio-description">
                             A calm mobile fishing game in which you cast out your line and try to catch as many fish as you can, while avoiding the dreaded shark.
-                            <br><br>Includes a leveling progression system, achievements, and an extra spearfishing mini-game in space. <br><br>
+                            <br><br>
                             Solo-developed and released on Iphone and Android. <br>
     
                             <!--LINK // target="_blank" will open new window-->
@@ -328,7 +357,7 @@
                         <p class="portfolio-description">
                             A 2D RPG prototype (extremely unpolished) with several systems in place: combat, quest and dialogue, inventory, equipment, spells, save/load, and a fishing mini-game.
                             <br><br>
-                            Solo-developed - rough prototype. <br>
+                            Solo-developed. <br>
                         </p>
                         <br>
                         <div style="height:1px;"></div>
@@ -388,7 +417,7 @@
 
             <!--FOOTER PANEL-->
             <div class="footer-panel"> 
-                <h1>Footer Here</h1>
+               
             </div> 
             
     </body>
